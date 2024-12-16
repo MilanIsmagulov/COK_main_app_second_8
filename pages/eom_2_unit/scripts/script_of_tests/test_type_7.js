@@ -11,6 +11,7 @@ function checkBtnStatus(){
         nextBtn.disabled = true;
         answerButton.classList.remove('gray_dis');
         answerButton.disabled = false;
+        answerButton.style.display = 'inline-block';
     } else {
         backWardBtn.classList.remove('gray_dis');
         backWardBtn.disabled = false;

@@ -541,7 +541,7 @@ table.iksweb td:first-child{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
 }
 .image_test_type_2{
     display: flex;
@@ -586,7 +586,7 @@ table.iksweb td:first-child{
     max-width: 250px;
 }
 .description_w_input_2 {
-    width: 65%;
+    width: 100%;
     margin-left: 25px;
 }
 .description_w_input_2 p{
@@ -987,7 +987,7 @@ ul li div{
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
-    font-size: 25px;
+    font-size: clamp(12px, 1.5vw, 25px) !important;
     font-weight: 700;
     background-color: rgb(0, 114, 192);
     color: #fff;
@@ -997,6 +997,17 @@ ul li div{
     align-items: center;
     height: 100px;
     width: 25vw;
+}
+#dynamic-content:has(.iksweb){
+    align-items: center;
+    justify-content: center;
+}
+#dynamic-content:has(.iksweb) .test_with_text_3{
+    margin-left: 0;
+}
+#dynamic-content:has(.iksweb) .test_with_text_3 select{
+    font-size: clamp(13px, 1.5vw, 22px);
+    max-width: 250px;
 }
 .number img {
     width: 70px;
@@ -1274,7 +1285,7 @@ line{
     align-items: center;
     justify-content: left;
     margin-right: 15px;
-    font-size: clamp(15px, 1.5vw, 25px);
+    font-size: clamp(13px, 1.5vw, 20px);
     width: clamp(150px, 30vw, 1000px);
     height: 100px;
     margin-left: 15px;
@@ -1924,6 +1935,12 @@ line{
     }
 }
 @media (max-width: 650px) {
+    .iksweb{
+        overflow: scroll;
+    }
+    .targetField, .definition{
+        height: 150px;
+    }
     .h0 img{
         min-width: 0px !important;
         max-width: 0px !important;
@@ -2050,9 +2067,6 @@ line{
     }
     .drag1 {
         gap: 1px !important;
-    }
-    .number{
-        font-size: 20px !important;
     }
     .list{
         padding: 5px !important;

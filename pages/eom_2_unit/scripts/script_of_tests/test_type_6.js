@@ -1,5 +1,4 @@
-answerButton.classList.remove('gray_dis');
-answerButton.disabled = false;
+
 var element = document.querySelector('.number_of_step');
 var number = parseInt(element.textContent, 10);
 var attempts = localStorage.getItem(`attempts_${number}`);
@@ -17,6 +16,9 @@ function checkBtnStatus(){
         backWardBtn.disabled = true;
         nextBtn.classList.add('gray_dis');
         nextBtn.disabled = true;
+        answerButton.classList.remove('gray_dis');
+        answerButton.disabled = false;
+        answerButton.style.display = 'inline-block';
     } else {
         backWardBtn.classList.remove('gray_dis');
         backWardBtn.disabled = false;
