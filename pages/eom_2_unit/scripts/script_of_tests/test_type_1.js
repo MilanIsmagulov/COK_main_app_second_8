@@ -276,7 +276,7 @@ function waitForData() {
         // Функция для проверки теста с вариантами ответов
         function checkAnswers() {
             var form = document.querySelector('.answer_form');
-            var correctAnswers = form.dataset.right.split(',').map(Number);
+            var correctAnswers = form.dataset.right.split(';').map(Number);
             var inputs = form.querySelectorAll('input');
             var attempts = parseInt(localStorage.getItem(`attempts_${number}`));
             var allCorrect = true;
@@ -351,7 +351,7 @@ function waitForData() {
             var anyIncorrect = false; // Флаг для отслеживания наличия неправильного ответа
             inputs.forEach(input => {
                 var userAnswer = input.value.trim();
-                var correctAnswers = input.dataset.correctAnswer ? input.dataset.correctAnswer.split(',').map(ans => ans.trim()) : [];
+                var correctAnswers = input.dataset.correctAnswer ? input.dataset.correctAnswer.split(';').map(ans => ans.trim()) : [];
                 if (correctAnswers.includes(userAnswer)) {
                     input.classList.add('correct');
                     input.classList.remove('incorrect');

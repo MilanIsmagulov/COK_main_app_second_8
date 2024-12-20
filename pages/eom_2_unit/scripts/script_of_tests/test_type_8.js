@@ -192,13 +192,13 @@ if (!planeText) {
                             const number = value?.replace('targetField', '');
                             return isNaN(number) ? null : Number(number);
                         }).filter(num => num !== null);
-                        console.log(result); // Глобальная переменная для хранения результата
+                        // console.log(result); // Глобальная переменная для хранения результата
                         // Обновляем правильные ответы
-                        console.log(test)
+                        // console.log(test)
                         var correctAnswersObj = test.find(item => item.correct_answer_type_10);
                         // Извлекаем массив, если объект найден
                         var correctAnswers = correctAnswersObj ? correctAnswersObj.correct_answer_type_10 : null;
-                        console.log(correctAnswers); // Глобальная переменная для правильных ответов
+                        // console.log(correctAnswers); // Глобальная переменная для правильных ответов
                         function checkLength() {
                             if (result.length != Object.keys(correctAnswers).length) {
                                 answerButton.classList.add('gray_dis');
