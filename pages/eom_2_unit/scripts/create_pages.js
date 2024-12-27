@@ -20,6 +20,11 @@ function waitForData(){
                 localStorage.setItem(`attempts_${i}`, '2');
             }
         };
+        document.querySelector('#backward_button').addEventListener('click', ()=>{
+            for(var i = 1; i <= Object.keys(data).length; i++){
+                localStorage.setItem(`attempts_${i}`, '2');
+            }
+        });
         // Функция для создания блока с текстом и изображением
         function createTextWithImage(paragraph){
             document.getElementById('control_button_3').style.display = 'none';
